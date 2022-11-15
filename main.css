@@ -1,63 +1,119 @@
+:root {
+  --text-color: #f0f4f5;
+  --background-color: #263343;
+  --accent-color: #d49466;
+}
+
 html,
 body {
   margin: 0;
   padding: 0;
   font-size: 16px;
+  font-family: 'Source Sans Pro', sans-serif;
 }
-
-/* #container {
-  width: 1400px;
-  height: 100vh;
-  margin: 0 auto;
-  background-color: #fff5f5;
-} */
 
 a {
   text-decoration: none;
+  color: var(--text-color);
 }
 
-nav {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+li {
+  list-style: none;
+}
+
+.navbar {
   width: 100%;
-  height: 100px;
-  background-color: #002442;
-  color: #fff;
+  background-color: var(--background-color);
 }
 
-
-.navbar_logo {
+.navbar #nav {
+  width: 980px;
+  margin: 0 auto;
+  background-color: var(--background-color);
+  padding: 8px 12px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
+}
+
+/* NAVBAR_LOGO */
+.navbar_logo {
+  font-size: 24px;
+  color: var(--text-color);
 }
 
 .navbar_logo .fa-accusoft {
-  margin-right: 10px;
-  color: #ffcc80;
+  color: var(--accent-color);
+  padding-right: 3px;
 }
 
-.navbar_logo a {
-  color: #fff;
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.navbar_menu {}
-
-.navbar_menu ul {
+/* NAVBAR_MENU */
+.navbar_menu {
   display: flex;
+  padding-left: 0;
 }
 
-.navbar_menu ul li {
-  margin-right: 50px;
-  font-size: 14px;
+.navbar_menu li {
+  padding: 8px 12px;
 }
 
-.navbar_menu ul li:last-child {
-  margin-right: 0;
+.navbar_menu li:hover {
+  background-color: var(--accent-color);
+  border-radius: 4px;
 }
 
-.navbar_icons .fa-facebook-f {
-  margin-left: 15px;
+/* NAVBAR_ICONS */
+.navbar_icons {
+  display: flex;
+  color: var(--text-color);
+  padding-left: 0;
+}
+
+.navbar_icons li {
+  padding: 8px 12px;
+}
+
+/* NAVBAR_TOGGLEBTN */
+.navbar_toggleBtn {
+  display: none;
+  position: absolute;
+  right: 32px;
+  font-size: 24px;
+  color: var(--accent-color);
+}
+
+@media (max-width: 768px) {
+  .navbar #nav {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 24px;
+  }
+
+  .navbar_menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .navbar_menu li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar_icons {
+    display: none;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .navbar_toggleBtn {
+    display: block;
+  }
+
+  .navbar_menu.active,
+  .navbar_icons.active {
+    display: flex;
+  }
 }

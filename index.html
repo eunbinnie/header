@@ -7,35 +7,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Responsive Nav Bar</title>
 
-  <!-- reset css cdn -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" />
-
   <!-- fontawesome -->
   <script src="https://kit.fontawesome.com/bf10c4ec2a.js" crossorigin="anonymous"></script>
 
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="./main.css" />
+
+  <script src="./main.js" defer></script>
 </head>
 
 <body>
   <nav class="navbar">
-    <div class="navbar_logo">
-      <i class="fa-brands fa-accusoft"></i>
-      <a href="">DreamCoding</a>
-    </div>
+    <div id="nav">
+      <div class="navbar_logo">
+        <i class="fa-brands fa-accusoft"></i>
+        <a href="">DreamCoding</a>
+      </div>
 
-    <div class="navbar_menu">
-      <ul>
-        <li>Home</li>
-        <li>Gallery</li>
-        <li>Weddings</li>
-        <li>FAQ</li>
-        <li>Bookings</li>
+      <ul class="navbar_menu">
+        <li><a href="">Home</a></li>
+        <li><a href="">Gallery</a></li>
+        <li><a href="">Weddings</a></li>
+        <li><a href="">FAQ</a></li>
+        <li><a href="">Bookings</a></li>
       </ul>
-    </div>
 
-    <div class="navbar_icons">
-      <i class="fa-brands fa-twitter"></i>
-      <i class="fa-brands fa-facebook-f"></i>
+      <ul class="navbar_icons">
+        <li><i class="fa-brands fa-twitter"></i></li>
+        <li><i class="fa-brands fa-facebook-f"></i></li>
+      </ul>
+
+      <a href="#" class="navbar_toggleBtn">
+        <i class="fa-solid fa-bars"></i>
+      </a>
     </div>
   </nav>
 </body>
